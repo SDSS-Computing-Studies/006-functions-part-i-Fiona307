@@ -6,3 +6,4 @@ The return value is the sum of all the numbers in the list
 added together
 (2 points)
 """
+
