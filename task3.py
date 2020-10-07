@@ -10,4 +10,5 @@ added together
 List = []
 
 def perimeter(List):
-    
+    n = List. count()
+    answer = 
