@@ -7,10 +7,13 @@ The return value is the largest value in the list
 (2 points)
 """
 List = []
-List.append(input())
-List.sort()
+
 def largest(List):
+    List.sort()
     answer = List[-1]
     return answer
-x = largest(List)
+x = largest([3,1,4,7,13,9])
 print(x)
+
+y = largest([5,1,12.3])
+print(y)
