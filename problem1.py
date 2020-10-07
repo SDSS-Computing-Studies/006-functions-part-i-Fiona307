@@ -11,12 +11,12 @@ import math
 
 def hypotenuse(a,b,boolean):
     if boolean == True:
-        answer = math.sqrt(float(a)**2 + float(b)**2)
+        answer = int(math.sqrt(float(a)**2 + float(b)**2))
     if boolean == False:
         if a > b:
-            answer = math.sqrt(float(a)**2 - float(b)**2)
+            answer = int(math.sqrt(float(a)**2 - float(b)**2))
         elif a < b:
-            answer = math.sqrt(float(b)**2 - float(a)**2)
+            answer = int(math.sqrt(float(b)**2 - float(a)**2))
     return answer
 
 x = hypotenuse(3,4,False)
