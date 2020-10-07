@@ -7,3 +7,7 @@ added together
 (2 points)
 """
 
+List = []
+
+def perimeter(List):
+    
