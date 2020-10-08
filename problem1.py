@@ -10,9 +10,9 @@ Return the missing side
 import math
 
 def hypotenuse(a,b,boolean):
-    if boolean == True:
-        answer = int(math.sqrt(float(a)**2 + float(b)**2))
     if boolean == False:
+        answer = int(math.sqrt(float(a)**2 + float(b)**2))
+    if boolean == True:
         if a > b:
             answer = int(math.sqrt(float(a)**2 - float(b)**2))
         elif a < b:
