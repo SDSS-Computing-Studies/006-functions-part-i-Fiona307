@@ -33,6 +33,7 @@ output is "There is 1 solution, x=??"
 If there are two solutions:
 output is: "The solutions are x=?? and x=??"
 """
+import math
 
 def numSolutions(a,b,c):
     # inputs:
@@ -40,8 +41,15 @@ def numSolutions(a,b,c):
     # float b
     # float c
     # Description:
-    #
+    # Calculate the discriminant of the equation
+    discriminant = float(b)**2 - 4*float(a)*float(c)
     # return 0, 1 or 2
+    if discriminant < 0:
+        return 0
+    elif discriminant == 0:
+        return 1
+    else:
+        return 2
 
 def solutions(a,b,c):
     #inputs:
@@ -49,19 +57,32 @@ def solutions(a,b,c):
     # float b
     # float c
     # Desription:
-    #
+    # Calculate the solutions
+    x = (-float(b) + math.sqrt(float(b)**2 - 4*float(a)*float(c)))/(2*float(a))
+    y = (-float(b) - math.sqrt(float(b)**2 - 4*float(a)*float(c)))/(2*float(a))
     # return tuple of float solution1 and float solution2
+    solution = (x,y)
+    return solution
 
 def title():
     # inputs none
     # return str of All the title and instructions on one line
+    title = "This program is used to find the solution of a quadratic equation in the format ax^2 + bx + c = 0."
+    instruction = "3 float values: a, b, c were entered in."
+    return title + " " + instruction
 
-
-def main():
+def main(a,b,c):
     # Display Title and Instructions
     print( title() )
     # Your code and function calls should go here
+    num = numSolutions(a,b,c)
+    if num == 0:
+        print("There are no real solutions")
+    if num == 1:
+        solution = solutions(a,b,c)
+        print("There is 1 solution, x =" + str(solution[0]))
+    if num == 2:
+        solution = solutions(a,b,c)
+        print("THe solutions are x =" + str(solution[0]) + " and x =" + str(solution[1]))
 
-
-
-main()
+main(2,2,2)
