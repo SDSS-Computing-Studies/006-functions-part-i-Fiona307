@@ -85,4 +85,4 @@ def main(a,b,c):
         solution = solutions(a,b,c)
         print("THe solutions are x =" + str(solution[0]) + " and x =" + str(solution[1]))
 
-main(2,2,2)
+main(2,9,7)
